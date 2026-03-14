@@ -1,6 +1,11 @@
-MIT License
+================================================================================
+  ROBLOX MULTI-ACCOUNT LAUNCHER
+  Copyright (c) 2025 Mandi040Gaming
+  https://github.com/Mandi040Gaming/roblox-multi-launcher
+================================================================================
 
-Copyright (c) 2025 Schwarzmayr
+MIT License
+-----------
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +24,117 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+================================================================================
+  THIRD-PARTY LICENSES
+================================================================================
+
+This software makes use of the following open-source libraries. Their
+respective licenses are listed below.
+
+--------------------------------------------------------------------------------
+1. requests
+   https://github.com/psf/requests
+   Copyright (c) 2019 Kenneth Reitz
+   Licensed under the Apache License, Version 2.0
+   https://www.apache.org/licenses/LICENSE-2.0
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+2. cryptography
+   https://github.com/pyca/cryptography
+   Copyright (c) Individual contributors
+   Licensed under Apache License 2.0 AND BSD 3-Clause License
+   https://github.com/pyca/cryptography/blob/main/LICENSE
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+3. Pillow (PIL Fork)
+   https://github.com/python-pillow/Pillow
+   Copyright (c) 1995-2011 Fredrik Lundh and Contributors
+   Copyright (c) 2010-2024 Alex Clark and Contributors
+   Licensed under the HPND License (Historical Permission Notice and Disclaimer)
+   https://github.com/python-pillow/Pillow/blob/main/LICENSE
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+4. Python Standard Library (tkinter, json, threading, subprocess, etc.)
+   https://www.python.org
+   Copyright (c) 2001-2024 Python Software Foundation
+   Licensed under the PSF License Agreement
+   https://docs.python.org/3/license.html
+--------------------------------------------------------------------------------
+
+================================================================================
+  DISCLAIMER - ROBLOX & THIRD-PARTY SERVICES
+================================================================================
+
+- This project is an independent, community-made tool and is NOT affiliated
+  with, endorsed by, sponsored by, or in any way officially connected to
+  Roblox Corporation or any of its subsidiaries or affiliates.
+
+- "Roblox", the Roblox logo, and all related names, logos, product and service
+  names, designs, and slogans are trademarks or registered trademarks of
+  Roblox Corporation. Use of these names is for identification purposes only
+  and does not imply endorsement.
+
+- "Bloxstrap" is an open-source project by bloxstraplabs
+  (https://github.com/bloxstraplabs/bloxstrap) and is not affiliated with
+  this project. Use of Bloxstrap is subject to its own license and terms.
+
+- This software interacts with Roblox's publicly accessible web API endpoints
+  (auth.roblox.com, users.roblox.com, thumbnails.roblox.com). Such use is
+  not officially sanctioned by Roblox Corporation and may be subject to
+  change or restriction at any time without notice.
+
+================================================================================
+  TERMS OF USE & USER RESPONSIBILITY
+================================================================================
+
+By downloading, installing, or using this software, you agree to the following:
+
+1. TERMS OF SERVICE COMPLIANCE
+   You are solely responsible for ensuring your use of this software complies
+   with Roblox's Terms of Service (https://en.help.roblox.com/hc/en-us/
+   articles/115004647846). Multi-account usage may violate those terms.
+   The author accepts no responsibility for account suspensions, bans, or any
+   other enforcement actions taken by Roblox Corporation.
+
+2. NO WARRANTY
+   This software is provided "as is" without warranty of any kind. The author
+   makes no guarantees regarding functionality, stability, compatibility with
+   future Roblox updates, or fitness for any particular purpose.
+
+3. DATA & PRIVACY
+   This software stores .ROBLOSECURITY cookies locally on your machine,
+   encrypted with a locally generated Fernet key. No account data, cookies,
+   or personal information is transmitted to the author or any third party.
+   The only external network requests made are to official Roblox API
+   endpoints for the purpose of authentication and avatar loading.
+
+4. NO LIABILITY
+   In no event shall the author be liable for any direct, indirect, incidental,
+   special, exemplary, or consequential damages (including but not limited to
+   loss of account access, data loss, or service interruption) arising from
+   the use or inability to use this software, even if advised of the
+   possibility of such damages.
+
+5. REDISTRIBUTION
+   You may freely copy, modify, distribute, and use this software under the
+   terms of the MIT License stated above, provided the copyright notice and
+   this permission notice are retained in all copies or substantial portions
+   of the software.
+
+6. MODIFICATIONS
+   If you distribute a modified version of this software, you must clearly
+   indicate that changes were made and must not misrepresent the modified
+   version as the original work.
+
+================================================================================
+  CONTACT
+================================================================================
+
+For bug reports, feature requests, or questions, please open an issue at:
+https://github.com/Mandi040Gaming/roblox-multi-launcher/issues
+
+================================================================================
