@@ -44,7 +44,7 @@ Roblox crashed during startup — most commonly caused by an invalid `TEMP` dire
 
 **Fix:**
 1. Make sure you are on the **latest version** of `roblox_launcher.py` (download from [Releases](https://github.com/Mandi040Gaming/roblox-multi-launcher/releases))
-2. This specific crash was fixed in **v3.0** — the `TEMP` variable now correctly points to the real Windows system temp folder
+2. This specific crash was fixed in **v1.1** — the `TEMP` variable now correctly points to the real Windows system temp folder
 3. If it still happens, delete the profile folder for the affected account:
    - Open `%LOCALAPPDATA%\RobloxMultiLauncher\profiles\` in Explorer
    - Delete the folder `acc_X` (where X is the account number)
@@ -64,7 +64,7 @@ Error: Der Verzeichnisname ist ungueltig (directory name is invalid)
 Roblox tried to write a crash dump to the `TEMP` folder, but the path set by the launcher was too long or contained characters that Windows does not accept for temp files.
 
 **Fix:**
-1. Update to the **latest version** of `roblox_launcher.py` — this was fixed in **v3.0**
+1. Update to the **latest version** of `roblox_launcher.py` — this was fixed in **v1.1**
 2. `TEMP` and `TMP` now point to the real Windows system temp (`C:\Users\...\AppData\Local\Temp`) instead of a per-profile path
 3. Simply redownload `roblox_launcher.py` from [Releases](https://github.com/Mandi040Gaming/roblox-multi-launcher/releases) and replace your existing file
 
