@@ -9,7 +9,7 @@
 [![Bloxstrap](https://img.shields.io/badge/Requires-Bloxstrap-7c3aed)](https://github.com/bloxstraplabs/bloxstrap/releases)
 [![License](https://img.shields.io/badge/License-MIT-22c55e)](LICENSE)
 
-[**GitHub Repository**](https://github.com/Mandi040Gaming/roblox-multi-launcher) · [**Report a Bug**](https://github.com/Mandi040Gaming/roblox-multi-launcher/issues) · [**Request a Feature**](https://github.com/Mandi040Gaming/roblox-multi-launcher/issues)
+[**Releases**](https://github.com/Mandi040Gaming/roblox-multi-launcher/releases) · [**Error Guide**](ERRORS.md) · [**Report a Bug**](https://github.com/Mandi040Gaming/roblox-multi-launcher/issues) · [**Request a Feature**](https://github.com/Mandi040Gaming/roblox-multi-launcher/issues)
 
 </div>
 
@@ -23,6 +23,19 @@
 - 🖼️ **Profile avatars** — automatically fetches and displays each account's Roblox headshot
 - 🎨 **Clean dark UI** — minimal, fast tkinter interface
 - 🔒 **Cookie-only** — no passwords stored, ever
+
+---
+
+## 📥 Download
+
+> ⚠️ **Always download the latest release** — older versions may have bugs that have already been fixed.
+
+1. Go to [**Releases**](https://github.com/Mandi040Gaming/roblox-multi-launcher/releases)
+2. Click the latest release at the top
+3. Under **Assets**, download **`roblox-multi-launcher-vX.X.zip`**
+4. Extract the ZIP and run **`start.bat`**
+
+The releases are located in the [`github_releases/`](github_releases/) folder of this repository and are also published as GitHub Releases for easy download.
 
 ---
 
@@ -53,150 +66,146 @@
 2. Run `Bloxstrap.exe` and let it install Roblox
 3. Launch Roblox at least once through Bloxstrap so all files are downloaded
 
-### Step 3 — Download this tool
+### Step 3 — Download the launcher
 
-**Option A — Download ZIP (recommended):**
-1. Click the green **Code** button at the top of [this page](https://github.com/Mandi040Gaming/roblox-multi-launcher)
-2. Select **Download ZIP**
-3. Extract the ZIP to any folder
-
-**Option B — Clone with Git:**
-```bash
-git clone https://github.com/Mandi040Gaming/roblox-multi-launcher.git
-cd roblox-multi-launcher
-```
+1. Go to [**Releases**](https://github.com/Mandi040Gaming/roblox-multi-launcher/releases) and download the latest ZIP
+2. Extract it to any folder on your PC
 
 ### Step 4 — Run
 
 Double-click **`start.bat`** — it will automatically install all Python dependencies and launch the tool.
 
-> 💡 On first launch, Windows Defender may show a warning. Click **"More info" → "Run anyway"**. This is normal for unsigned scripts — the full source code is available in `roblox_launcher.py` for review.
+> 💡 On first launch, Windows Defender may show a warning. Click **"More info" → "Run anyway"**. The full source code is in `roblox_launcher.py` for review.
 
 ---
 
 ## 🍪 How to get your `.ROBLOSECURITY` Cookie
 
-The tool uses your browser cookie to authenticate with Roblox. No password is ever stored or transmitted.
+The tool authenticates via your browser cookie — no password is ever stored or transmitted.
 
 ### Chrome / Edge / Brave
 
 1. Go to [roblox.com](https://www.roblox.com) and log in with the account you want to add
-2. Press **F12** to open DevTools
-3. Go to the **Application** tab
-4. In the left panel: **Storage → Cookies → https://www.roblox.com**
-5. Find the row named **`.ROBLOSECURITY`**
-6. Double-click the **Value** cell → **Ctrl+A** → **Ctrl+C**
-7. Paste into the Cookie field in the launcher
+2. Press **F12** → **Application** tab
+3. Left panel: **Storage → Cookies → https://www.roblox.com**
+4. Find **`.ROBLOSECURITY`** → double-click the Value cell → **Ctrl+A** → **Ctrl+C**
+5. Paste into the Cookie field in the launcher
 
 ### Firefox
 
-1. Go to [roblox.com](https://www.roblox.com) and log in
-2. Press **F12** → open the **Storage** tab
-3. In the left panel: **Cookies → https://www.roblox.com**
-4. Click `.ROBLOSECURITY` → copy the value on the right side
+1. Go to [roblox.com](https://www.roblox.com) and log in → press **F12** → **Storage** tab
+2. Left panel: **Cookies → https://www.roblox.com**
+3. Click `.ROBLOSECURITY` → copy the value on the right
 
-### Cookie-Editor Extension (easiest method)
+### Cookie-Editor Extension (easiest)
 
 1. Install [Cookie-Editor](https://cookie-editor.com) from the Chrome Web Store or Firefox Add-ons
-2. Go to roblox.com while logged in with the desired account
-3. Click the Cookie-Editor icon in your browser toolbar
-4. Find `.ROBLOSECURITY` → click it → copy the value
+2. Go to roblox.com while logged in → click the Cookie-Editor icon
+3. Find `.ROBLOSECURITY` → copy the value
 
-> ⚠️ The cookie starts with `_|WARNING:-DO-NOT-SHARE...` — make sure you copy the **entire value** (~600 characters). Cookies expire after approximately 30 days and will need to be refreshed.
+> ⚠️ The cookie starts with `_|WARNING:-DO-NOT-SHARE...` and is ~600 characters long. Copy the **entire value**. Cookies expire after ~30 days.
 
 ---
 
 ## 📖 Usage
 
-1. **Add an account** — Click **"➕ Add Account"** in the sidebar, enter a display name and paste the `.ROBLOSECURITY` cookie
-2. **Select accounts** — Click on account cards to select them (highlighted in blue)
-3. **Launch selected** — Click **"▶ Launch Selected"** in the bottom bar, or double-click a card to launch it immediately
-4. **Launch all** — Click **"▶▶ Launch All"** in the sidebar to start every account at once
+1. **Add an account** — Click **"➕ Add Account"**, enter a display name and paste the cookie
+2. **Select accounts** — Click cards to select them (highlighted in blue)
+3. **Launch selected** — Click **"▶ Launch Selected"** or double-click a card to launch immediately
+4. **Launch all** — Click **"▶▶ Launch All"** to start every account at once
 
-> Each account starts with an **8-second delay** between instances to ensure clean, isolated cookie injection.
+> Each account starts with an **8-second delay** between instances to ensure clean, isolated login.
 
 ---
 
-## 🗂️ File Structure
+## 🗂️ Repository Structure
 
 ```
 roblox-multi-launcher/
-├── roblox_launcher.py     # Main application
-├── start.bat              # Windows launcher — run this!
-├── README.md              # This file
-├── LICENSE                # MIT License
+│
+├── github_releases/           ← All versioned releases live here
+│   ├── v3.0/
+│   │   ├── roblox_launcher.py
+│   │   ├── start.bat
+│   │   └── README.md
+│   └── ...
+│
+├── roblox_launcher.py         ← Latest version of the main app
+├── start.bat                  ← Run this to launch
+├── README.md                  ← This file
+├── ERRORS.md                  ← Full error guide
+├── LICENSE
 └── .gitignore
 ```
 
-**App data stored in `%LOCALAPPDATA%\RobloxMultiLauncher\`:**
+> 💡 The `github_releases/` folder contains all past and current versioned releases. **Always use the latest one** — older releases may have known bugs that have been fixed.
+
+**App data stored locally at `%LOCALAPPDATA%\RobloxMultiLauncher\`:**
 ```
 RobloxMultiLauncher/
-├── accounts.json          # Encrypted account list
-├── .key                   # Fernet encryption key (never share or commit this!)
-├── profiles/              # Isolated per-account Roblox profile folders
+├── accounts.json          ← Encrypted account list
+├── .key                   ← Encryption key (never share or commit this!)
+├── profiles/              ← Isolated per-account Roblox profiles
 │   └── acc_1/
 │       └── LocalAppData/
-└── avatars/               # Cached profile picture PNGs
+└── avatars/               ← Cached profile picture PNGs
 ```
 
 ---
 
 ## 🔧 How It Works
 
-1. **Cookie validation** — When you add an account, the cookie is validated against the Roblox Users API to confirm it is active
-2. **Auth Ticket** — Before each launch, a short-lived one-time auth ticket is requested from `auth.roblox.com/v1/authentication-ticket` using a two-step CSRF flow
-3. **Isolated profiles** — Each account gets its own `LOCALAPPDATA` environment via per-account profile directories, so Roblox instances never share session state
-4. **Mutex bypass** — Roblox uses a Windows named mutex (`ROBLOX_singletonEvent`) to block multiple instances. The launcher claims this mutex first, allowing any number of instances to run simultaneously
-5. **Direct launch** — `RobloxPlayerBeta.exe` is started directly with the auth ticket URI, bypassing Bloxstrap's interactive menu entirely
+1. **Cookie validation** — The cookie is verified against `users.roblox.com/v1/users/authenticated`
+2. **Auth Ticket** — A short-lived token is fetched from `auth.roblox.com/v1/authentication-ticket` using a two-step CSRF flow
+3. **Isolated profiles** — Each account gets its own `LOCALAPPDATA` via environment variables, preventing session conflicts
+4. **Mutex bypass** — The launcher holds the `ROBLOX_singletonEvent` Windows mutex, allowing multiple instances to run simultaneously
+5. **Direct launch** — `RobloxPlayerBeta.exe` is started with the auth ticket URI, bypassing Bloxstrap's menu entirely
 
 ---
 
-## ❓ Troubleshooting
+## ❓ Errors & Troubleshooting
 
-**"RobloxPlayerBeta.exe not found"**
-> Launch Roblox at least once via Bloxstrap. The tool searches in `%LOCALAPPDATA%\Bloxstrap\Versions\` and `%LOCALAPPDATA%\Roblox\Versions\`.
+For a full list of every known error with causes and step-by-step fixes, see **[ERRORS.md](ERRORS.md)**.
 
-**"Auth ticket failed"**
-> Run the tool from a terminal (`python roblox_launcher.py`) to see detailed console output. The most common cause is an expired cookie — remove the account and re-add it with a freshly copied cookie.
+**Quick reference:**
 
-**Roblox opens but lands on the home screen**
-> This is expected — the tool launches Roblox without targeting a specific game. Join any game manually after the client loads.
-
-**All instances log in as the same account**
-> Each account card must use its own unique cookie copied from a separate browser session logged in as a different Roblox account.
-
-**Windows Defender / Antivirus warning**
-> The tool uses standard Windows APIs (registry access, named mutex via `kernel32.dll`) which can trigger heuristic detection. The full source is in `roblox_launcher.py` — nothing is sent to any server other than Roblox's own official APIs.
+| Error | Fix |
+|-------|-----|
+| `Roblox encountered an unexpected error` | Update to latest version, delete profile folder for that account |
+| `Failed to create temporary file for dump creation` | Update to latest version (fixed in v3.0) |
+| `Auth ticket failed` | Cookie expired — re-add account with a fresh cookie |
+| `RobloxPlayerBeta.exe not found` | Launch Roblox once via Bloxstrap |
+| `Invalid cookie` | Copy the full cookie value again from your browser |
+| `Python is not recognized` | Reinstall Python with "Add to PATH" checked |
+| All accounts log in as the same user | Each account needs its own unique cookie |
 
 ---
 
 ## ⚖️ Legal & Disclaimer
 
-- This project is **not affiliated with, endorsed by, or connected to Roblox Corporation** in any way
+- This project is **not affiliated with, endorsed by, or connected to Roblox Corporation**
 - Use is **at your own risk** — multi-account usage may violate [Roblox's Terms of Service](https://en.help.roblox.com/hc/en-us/articles/115004647846)
-- All account data is stored **locally on your machine only** — cookies are never uploaded, logged, or transmitted to any third party
-- The author is not responsible for any account actions, bans, or other consequences resulting from use of this tool
+- All data is stored **locally only** — nothing is uploaded or shared
+- The author is not responsible for any bans or consequences from using this tool
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE) — see the file for details.
+[MIT License](LICENSE)
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! For major changes, please open an issue first.
-
-1. Fork the repository at [github.com/Mandi040Gaming/roblox-multi-launcher](https://github.com/Mandi040Gaming/roblox-multi-launcher)
-2. Create a feature branch: `git checkout -b feature/my-feature`
-3. Commit your changes: `git commit -m "Add my feature"`
-4. Push to the branch: `git push origin feature/my-feature`
+1. Fork the repo at [github.com/Mandi040Gaming/roblox-multi-launcher](https://github.com/Mandi040Gaming/roblox-multi-launcher)
+2. Create a branch: `git checkout -b feature/my-feature`
+3. Commit: `git commit -m "Add my feature"`
+4. Push: `git push origin feature/my-feature`
 5. Open a Pull Request
 
 ---
 
 <div align="center">
-Made with ❤️ &nbsp;—&nbsp; If you find this useful, consider leaving a ⭐ on <a href="https://github.com/Mandi040Gaming/roblox-multi-launcher">GitHub</a>!
+Made with ❤️ &nbsp;—&nbsp; If this helped you, leave a ⭐ on <a href="https://github.com/Mandi040Gaming/roblox-multi-launcher">GitHub</a>!
 </div>
